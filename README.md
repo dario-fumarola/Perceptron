@@ -1,63 +1,66 @@
 # Perceptron
-# Project Title
 
-Simple overview of use/purpose.
+This repository builds a perceptron: the elementary unit for a neural network.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+A perceptron is a mathematical function modeled similarly to a biological neuron. It takes inputs, weighs them independently, adds them together, and passes the sum to a nonlinear function. Since it is the simplest form of artificial neuron, perceptrons are used for supervised learning of binary classifiers. The model learns the weights of the inputs to draw a linear decision boundary.
+
+![perceptron](https://user-images.githubusercontent.com/86791449/129929541-00556375-9974-4693-a28d-94c554cdf0b2.png)
+
+Perceptron work based on the Perceptron Learning Rule: an algorithm will automatically learn the optimal weight coefficient. As the model receives several inputs, it computes the sum and decides whether it reaches a certain threshold, so outputting a binary classification.
+
+In this project, we are classyfing structured data using a perceptron following these steps:
+* Inputs and weights are considered as matrices and multiplied
+* The product is added to the bias
+* Loss function calculates the error and optimizes with gradient discend
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+We will need:
+* Keras
+* NumPy
+* SciPy
+* Pandas
+* Matplotlib
+* Tensorflow
+* Scikit-Learn
+
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+The program runs through Jupyter Notebook, and requires a set of .csv data with a pair of values per input.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+Upload both the .ipynb notebook and the dataset to a new Jupyter folder. Then, run the script cell-by-cell.
+The program should output a visualization of the data, a final loss, and a confusion matrix. If all the values in this matrix fall in the diagonal, the model is accurate with an accuracy score of 1.0.
+
+![VISUALIZE](https://user-images.githubusercontent.com/86791449/129933535-619387de-841e-497c-b2ab-e215b319bf03.png)
+![accuracy](https://user-images.githubusercontent.com/86791449/129933757-e0211b10-1b67-4576-a9a0-54d8c87b8c95.png)
+
+
 
 ## Help
 
-Any advise for common problems or issues.
+To load correctly the data run the command:
 ```
-command to run if program contains helper info
+dataframe = pd.read_csv('data.csv')
+dataframe.head()
 ```
+If correct, it will display the first few lines as such:
 
-## Authors
+![data](https://user-images.githubusercontent.com/86791449/129934194-5d026895-a78e-45ae-8647-597c6b73242b.png)
 
-Contributors names and contact info
+Make sure you have installed all dependencies.
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
-## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
