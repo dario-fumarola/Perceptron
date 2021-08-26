@@ -57,6 +57,11 @@ If correct, it will display the first few lines as such:
 Make sure you have installed all dependencies.
 
 
+## License
+
+This project is licensed under The Unlicense - see the LICENSE.md file for details
+
+
 ## Version History
 
 * 0.1
